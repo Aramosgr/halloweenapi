@@ -13,7 +13,7 @@ var config = {
 module.exports = {
     getGameState: async function () {
         try {
-            let query = `select state from gameState`;
+            let query = `select * from gameState`;
             const connection = await sql.connect(config);
             const result = await connection.request().query(query);
             return result.recordset[0];

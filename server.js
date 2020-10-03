@@ -10,6 +10,8 @@ app.use(bodyParser.json());
 
 
 app.get('/', (request, response) => {
+    response.header("Access-Control-Allow-Origin", "https://halloween.azurewebsites.net/"); // update to match the domain you will make the request from
+    response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     response.json({ service: process.env.npm_package_name, version: process.env.npm_package_version });
 });
 
