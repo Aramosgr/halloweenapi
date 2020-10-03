@@ -1,0 +1,3 @@
+D:\Programacion\C#\halloweenapi\obj\Release\halloweenapi.njsprojAssemblyReference.cache
+D:\Programacion\C#\halloweenapi\obj\Release\halloweenapi.njsproj.CoreCompileInputs.cache
+D:\Programacion\C#\halloweenapi\bin\Microsoft.NodejsTools.WebRole.dll

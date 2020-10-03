@@ -1,0 +1,19 @@
+{
+  "name": "halloweenapi",
+  "version": "0.0.0",
+  "description": "halloweenapi",
+  "scripts": {
+    "start": "node server"
+  },
+  "engines": {
+    "node": "~6.10.x"
+  },
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mssql": "^6.2.3"
+  }
+}

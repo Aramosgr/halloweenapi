@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/be70586f-c724-47d8-a2b3-304aeb347e5a/resourceGroups/recursos/providers/Microsoft.Web/sites/halloweenapi",
+    "appService.deploySubpath": "."
+}
