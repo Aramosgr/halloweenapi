@@ -3,7 +3,7 @@ const APIResponse = require("./apiResponse");
 
 module.exports = {
   getGameState: async function (request, response) {
-    const data = await sqlService.getGameState();
+    const data = await sqlService.getGameState(request.query.id);
     const apiResponse = new APIResponse(200, data);
     response.header(
       "Access-Control-Allow-Origin",
