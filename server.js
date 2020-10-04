@@ -17,6 +17,7 @@ app.get('/', (request, response) => {
 });
 
 app.get('/gameState', halloweenService.getGameState);
+app.post('/gameState', halloweenService.setGameState);
 app.get('/phases', halloweenService.getPhases);
 app.get('/phase', halloweenService.getPhase);
 

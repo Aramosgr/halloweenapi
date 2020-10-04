@@ -11,12 +11,22 @@ var config = {
 };
 
 module.exports = {
-    getGameState: async function () {
+    getGameState: async function (id) {
         try {
-            let query = `select * from gameState`;
+            let query = `select * from gameState where id=${id}`;
             const connection = await sql.connect(config);
             const result = await connection.request().query(query);
             return result.recordset[0];
+        } catch (e) {
+            console.log(e);
+        }
+    },
+    setGameState: async function (id, state) {
+        try {
+            let query = `update gameState set state=${state} where id=${id}`;
+            const connection = await sql.connect(config);
+            await connection.request().query(query);
+            return this.getGameState(id);
         } catch (e) {
             console.log(e);
         }
