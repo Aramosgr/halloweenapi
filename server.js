@@ -17,6 +17,8 @@ app.get('/', (request, response) => {
 });
 
 app.get('/gameState', halloweenService.getGameState);
+app.get('/phases', halloweenService.getPhases);
+app.get('/phase', halloweenService.getPhase);
 
 let server = app.listen(port, () => {
     var host = server.address().address;

@@ -20,5 +20,25 @@ module.exports = {
         } catch (e) {
             console.log(e);
         }
+    },
+    getPhases: async function () {
+        try {
+            let query = `select * from phase`;
+            const connection = await sql.connect(config);
+            const result = await connection.request().query(query);
+            return result.recordset;
+        } catch (e) {
+            console.log(e);
+        }
+    },
+    getPhase: async function (id) {
+        try {
+            let query = `select * from phase where id=${id}`;
+            const connection = await sql.connect(config);
+            const result = await connection.request().query(query);
+            return result.recordset[0];
+        } catch (e) {
+            console.log(e);
+        }
     }
 };
