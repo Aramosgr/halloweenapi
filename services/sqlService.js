@@ -50,5 +50,25 @@ module.exports = {
         } catch (e) {
             console.log(e);
         }
-    }
+    },
+    getParticipants: async function () {
+        try {
+            let query = `select * from participant`;
+            const connection = await sql.connect(config);
+            const result = await connection.request().query(query);
+            return result.recordset;
+        } catch (e) {
+            console.log(e);
+        }
+    },
+    setParticipantPhase: async function (code, phase) {
+        try {
+            let query = `update participant set phase=${phase} where code=${code}`;
+            const connection = await sql.connect(config);
+            await connection.request().query(query);
+            return this.getGameState(id);
+        } catch (e) {
+            console.log(e);
+        }
+    },
 };

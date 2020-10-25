@@ -20,6 +20,8 @@ app.get('/gameState', halloweenService.getGameState);
 app.post('/gameState', halloweenService.setGameState);
 app.get('/phases', halloweenService.getPhases);
 app.get('/phase', halloweenService.getPhase);
+app.get('/participants', halloweenService.getParticipants);
+app.post('/participant', halloweenService.setParticipantPhase);
 
 let server = app.listen(port, () => {
     var host = server.address().address;
